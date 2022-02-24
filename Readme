@@ -11,3 +11,6 @@ This Crud API collection Includes
 4 ) Upload Pictures
 5 ) Update objects
 6 ) Delete Object
+
+
+I had a few issues with 3 - c : that's why I have tried to do it with a specific field which will, although limit the use of fields of objects so it's kind of a demerit
