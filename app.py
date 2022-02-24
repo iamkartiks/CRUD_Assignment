@@ -97,7 +97,20 @@ def get_recipe(_id):
 
     return jsonify({'result':output})
 
+# GET OBJECT BY SPECIFIC FIELD
 
+@app.route('/framework/<recipe_name>', methods=['GET'])
+def get_one_framework(recipe_name):
+    recipe = mongo.db.demoConnection
+
+    q = recipe.find_one({'recipe_name' : recipe_name})
+
+    if q:
+        output = {'recipe_name':q['recipe_name'], 'Instructions':q['Instructions'], 'Ingredients':q['Ingredients'],'Items':q['Items']}
+    else:
+        output = 'No results found'
+
+    return jsonify({'result' : output})
 # DELETE OBJECT
 
 @app.route('/delete/<id>', methods=['DELETE'])
