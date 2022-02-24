@@ -1,1 +1,13 @@
 Hey ! This is a basic CRUD application file built with framework Flask with NRDBMS database mongoDB.
+
+
+This Crud API collection Includes
+
+
+1 ) Create new object
+2 ) Get all objects
+3 ) Get objects by id 
+    - get objects using parameter
+4 ) Upload Pictures
+5 ) Update objects
+6 ) Delete Object
