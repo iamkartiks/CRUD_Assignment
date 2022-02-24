@@ -99,8 +99,8 @@ def get_recipe(_id):
 
 # GET OBJECT BY SPECIFIC FIELD
 
-@app.route('/framework/<recipe_name>', methods=['GET'])
-def get_one_framework(recipe_name):
+@app.route('/recipe/<recipe_name>', methods=['GET'])
+def get_one_recipe(recipe_name):
     recipe = mongo.db.demoConnection
 
     q = recipe.find_one({'recipe_name' : recipe_name})
