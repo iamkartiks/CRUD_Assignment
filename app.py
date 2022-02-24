@@ -25,7 +25,8 @@ recipe = mongo.db.demoConnection
 @app.route('/', methods = ['GET'])
 def get_all_routes():
     
-    resp = jsonify('Successfully Created !')
+    resp = jsonify(['All Recipes : http://127.0.0.1:5000/recipes', 'Specific Recipe : http://127.0.0.1:5000/recipe/<id>', 'Delete Recipe : http://127.0.0.1:5000/delete/<id>', 'Add Recipe : http://127.0.0.1:5000/add', 'Upload Pictures : http://127.0.0.1:5000/uploader'])
+
 
     return resp
 
@@ -59,7 +60,7 @@ def add_recipe():
     return jsonify({'result':output})
 
 # UPLOAD IMAGES
-
+@app.route('/uploader', methods = ['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
         
